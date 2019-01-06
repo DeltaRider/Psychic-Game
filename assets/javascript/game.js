@@ -20,6 +20,8 @@ document.onkeyup = function(){
     if (letterToGuess.includes(event.key)){
         wins++;
         document.querySelector('#wins').innerText = "Wins: " + wins;
+        guessesLeft = 9;
+        document.querySelector('#tries').innerText = "Guesses Left: " + guessesLeft;
     } else {
         guessesLeft--;
         document.querySelector('#tries').innerText = "Guesses Left: " + guessesLeft;
