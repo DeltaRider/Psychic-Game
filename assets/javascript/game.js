@@ -23,6 +23,8 @@ document.onkeyup = function(){
         guessesLeft = 9;
         document.querySelector('#tries').innerText = "Guesses Left: " + guessesLeft;
     } else {
+        lettersGuessed.push(event.key);
+        document.querySelector('#letters').innerText = "Letters Guessed: " + lettersGuessed;
         guessesLeft--;
         document.querySelector('#tries').innerText = "Guesses Left: " + guessesLeft;
     }
