@@ -1,12 +1,12 @@
-alert (`Welcome to the Psychic Game!
+// alert (`Welcome to the Psychic Game!
 
-You have 9 guesses to guess the letter I'm thinking of.
-You can guess any letter in the alphabet.
-You cannot guess the same letter twice.
-If you guess correctly, you win!
-If don't guess within 9 tries, you lose...
+// You have 9 guesses to guess the letter I'm thinking of.
+// You can guess any letter in the alphabet.
+// You cannot guess the same letter twice.
+// If you guess correctly, you win!
+// If don't guess within 9 tries, you lose...
 
-Good Luck.`)
+// Good Luck.`)
 
 var wins = 0;
 var losses = 0;
@@ -22,6 +22,9 @@ document.onkeyup = function(){
         document.querySelector('#wins').innerText = "Wins: " + wins;
         guessesLeft = 9;
         document.querySelector('#tries').innerText = "Guesses Left: " + guessesLeft;
+        lettersGuessed = [""];
+        document.querySelector('#letters').innerText = "Letters Guessed: ";
+        
     } else {
         lettersGuessed.push(event.key);
         document.querySelector('#letters').innerText = "Letters Guessed: " + lettersGuessed;
