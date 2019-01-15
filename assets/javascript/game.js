@@ -19,7 +19,7 @@ var playAgain;
 var newNum;
 
 document.onkeyup = function(){
-    if (letterToGuess.includes(event.key)){
+    if (letterToGuess == event.key){
         wins++;
         document.querySelector('#wins').innerText = "Wins: " + wins;
         guessesLeft = 9;
@@ -33,7 +33,7 @@ document.onkeyup = function(){
         }        
     } else {
         lettersGuessed.push(event.key);
-        document.querySelector('#letters').innerText = "Letters Guessed: " + lettersGuessed;
+        document.querySelector('#letters').innerText = "Letters Guessed: " + lettersGuessed.toString().substr(1);
         guessesLeft--;
         document.querySelector('#tries').innerText = "Guesses Left: " + guessesLeft;
         if (guessesLeft < 1){
